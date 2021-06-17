@@ -1,0 +1,26 @@
+
+const routes = [
+  {
+    path: '/',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: 'partisia', component: () => import('pages/Partisia.vue') },
+      { path: 'wallets', component: () => import('pages/Wallets.vue') },
+      { path: 'audit', component: () => import('pages/Audit.vue') },
+      { path: 'installation', component: () => import('pages/Installation.vue') },
+      { path: 'connect', component: () => import('pages/Connect.vue') },
+      { path: 'contract', component: () => import('pages/Contract.vue') },
+      { path: '', component: () => import('pages/Partisia.vue') }
+      // { path: '', component: () => import('pages/Index.vue') }
+    ]
+  },
+
+  // Always leave this as last one,
+  // but you can also remove it
+  {
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/Error404.vue')
+  }
+]
+
+export default routes
