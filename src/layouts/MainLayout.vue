@@ -131,7 +131,7 @@ export default defineComponent({
     }
   },
   mounted() {
-    this.routeActive = this.$route.path.substr(1)
+    this.routeActive = this.$route.path.substr(1) || 'partisia'
     setTimeout(() => {
       PR.prettyPrint()
     }, 10)

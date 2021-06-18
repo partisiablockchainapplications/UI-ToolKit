@@ -5,12 +5,26 @@
     <q-card>
       <q-card-section>
         <div>
-          <pre class="prettyprint break-line"><code class="language-javascript">{{codeDapp}}</code></pre>
+          <pre class="prettyprint break-line"><code class="language-javascript">{{`// import the library
+import PartisiaSdk from 'partisia-sdk'
+
+// use the library
+const sdk = new PartisiaSdk()
+await sdk.connect({
+  chainId: '${txtChainId}',
+  permissions: ['sign'],
+  dappName: 'Ex dApp Name',
+})
+
+// Save a reference to sdk to use it other parts or your application
+`}}</code></pre>
         </div>
       </q-card-section>
       <q-separator dark />
       <q-card-actions vertical>
-        <q-btn color="primary" label="Connect to Wallet" @click="onConnect" />
+        <q-input outlined v-model="txtChainId" label="chainId" />
+        <q-input class="q-mt-sm" outlined v-model="txtPermissions" label="Permission" />
+        <q-btn class="q-mt-sm" color="primary" label="Connect to Wallet" @click="onConnect" />
       </q-card-actions>
     </q-card>
     <div class="text-body1 q-pt-md">
@@ -41,8 +55,9 @@
 </template>
 
 <script>
-import { useQuasar, openURL } from 'quasar'
+import { defineComponent, ref, onMounted } from 'vue'
 import { useStore, mapGetters } from 'vuex'
+import { useQuasar, openURL } from 'quasar'
 import PartisiaSdk from 'partisia-sdk'
 export default {
   // name: 'PageName',
@@ -52,27 +67,18 @@ export default {
   setup() {
     const $q = useQuasar()
     const store = useStore()
+
+    const txtChainId = ref('PARTISIA beta net (0.10)')
+    const txtPermissions = ref('sign')
     return {
-      codeDapp: `// import the library
-import PartisiaSdk from 'partisia-sdk'
-
-// use the library
-const sdk = new PartisiaSdk()
-await sdk.connect({
-  chainId: 'PARTISIA beta net (0.9)',
-  permissions: ['sign'],
-  dappName: 'Ex dApp Name',
-})
-
-// Save a reference to sdk to use it other parts or your application
-`,
-
+      txtChainId,
+      txtPermissions,
       onConnect: async () => {
         try {
           const sdk = new PartisiaSdk()
           await sdk.connect({
-            chainId: 'PARTISIA beta net (0.9)',
-            permissions: ['sign'],
+            chainId: txtChainId.value,
+            permissions: [txtPermissions.value],
             dappName: 'Ex dApp Name',
           })
           await store.dispatch('sdkConnect', { connection: sdk.connection, seed: sdk.seed })

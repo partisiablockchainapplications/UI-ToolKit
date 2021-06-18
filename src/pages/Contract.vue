@@ -8,7 +8,10 @@
     <q-card>
       <q-card-section>
         <div>
-          <pre class="prettyprint break-line"><code class="language-javascript">{{codeSign}}</code></pre>
+          <pre class="prettyprint break-line"><code class="language-javascript">{{`const res = await sdk.signMessage({
+  payload: '${txtMessage}',
+  payloadType: 'utf8',
+})`}}</code></pre>
         </div>
       </q-card-section>
       <q-separator dark />
@@ -32,12 +35,38 @@
     <q-card>
       <q-card-section>
         <div>
-          <pre class="prettyprint break-line"><code class="language-javascript">{{codeTransfer}}</code></pre>
+          <pre
+            class="prettyprint break-line"
+          ><code class="language-javascript">{{`import { partisiaCrypto } from 'partisia-crypto'
+
+const nonce = await rpc.getNonce(sdk.connection.account.address)
+const contract = '02000000000000000000000000000000000000b008'
+const payload = {
+  invocationType: ${partisiaCrypto.transaction.CONSTANTS.TokenInvocation.TRANSFER},
+  symbol: '${txtSymbol}',
+  amount: '${txtAmount}',
+  from: '${sdkClient?.connection?.account?.address || '<connected address>'}',
+  to: '${txtTo}',
+}
+const serialized = partisiaCrypto.transaction.serializedTransaction(
+  { nonce, validTo: Date.now() + 120 * 1000 }, // two minutes
+  { contract },
+  payload,
+  partisiaCrypto.abi.Payload_TokenTransfer
+)
+const res = await sdk.signMessage({
+  payload: serialized.toString('hex'),
+  payloadType: 'hex',
+  dontBroadcast: false,
+})`}}</code></pre>
         </div>
       </q-card-section>
       <q-separator dark />
       <q-card-actions vertical>
-        <q-btn color="primary" label="Transfer" @click="onTransfer" />
+        <q-input type="number" outlined v-model="txtSymbol" label="Symbol" />
+        <q-input class="q-mt-sm" type="number" outlined v-model="txtAmount" label="Amount" />
+        <q-input class="q-mt-sm" outlined v-model="txtTo" label="To" />
+        <q-btn class="q-mt-sm" color="primary" label="Transfer" @click="onTransfer" />
       </q-card-actions>
     </q-card>
   </q-page>
@@ -54,6 +83,9 @@ import { partisiaCrypto } from 'partisia-crypto'
 
 export default {
   // name: 'PageName',
+  computed: {
+    ...mapGetters(['sdkClient']),
+  },
   setup() {
     const $q = useQuasar()
     const store = useStore()
@@ -62,34 +94,11 @@ export default {
     const txtSymbol = ref('1234')
     const txtAmount = ref('1')
     return {
+      partisiaCrypto,
       txtSymbol,
       txtAmount,
       txtTo,
       txtMessage,
-      codeSign: `const res = await sdk.signMessage({
-  payload: txtMessage.value,
-  payloadType: 'utf8',
-})`,
-      codeTransfer: `const nonce = await rpc.getNonce(sdk.connection.account.address)
-const contract = '02000000000000000000000000000000000000b008'
-const payload = {
-  invocationType: partisiaCrypto.transaction.CONSTANTS.TokenInvocation.TRANSFER,
-  symbol: txtSymbol.value,
-  amount: txtAmount.value,
-  from: sdk.connection.account.address,
-  to: txtTo.value,
-}
-const serialized = partisiaCrypto.transaction.serializedTransaction(
-  { nonce, validTo: Date.now() + 120 * 1000 }, // two minutes
-  { contract },
-  payload,
-  partisiaCrypto.abi.Payload_TokenTransfer
-)
-const res = await sdk.signMessage({
-  payload: serialized.toString('hex'),
-  payloadType: 'hex',
-  dontBroadcast: false,
-})`,
       onTransfer: async () => {
         try {
           const sdkClient = store.getters.sdkClient
