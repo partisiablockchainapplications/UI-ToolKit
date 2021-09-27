@@ -38,7 +38,11 @@
           <pre
             class="prettyprint break-line"
           ><code class="language-javascript">{{`import { partisiaCrypto } from 'partisia-crypto'
+import { PartisiaRpc } from 'partisia-rpc'
 
+const rpc = PartisiaRpc({
+  baseURL: 'https://betareader.partisiablockchain.com/shards/Shard0',
+})
 const nonce = await rpc.getNonce(sdk.connection.account.address)
 const contract = '02000000000000000000000000000000000000b008'
 const payload = {
@@ -52,7 +56,7 @@ const serialized = partisiaCrypto.transaction.serializedTransaction(
   { nonce, validTo: Date.now() + 120 * 1000 }, // two minutes
   { contract },
   payload,
-  partisiaCrypto.abi.Payload_TokenTransfer
+  partisiaCrypto.abi_system.Payload_TokenTransfer
 )
 const res = await sdk.signMessage({
   payload: serialized.toString('hex'),
@@ -63,6 +67,8 @@ const res = await sdk.signMessage({
       </q-card-section>
       <q-separator dark />
       <q-card-actions vertical>
+        <q-input class="q-mb-sm" outlined v-model="baseURL" label="Base URL" />
+        <br/>
         <q-input type="number" outlined v-model="txtSymbol" label="Symbol" />
         <q-input class="q-mt-sm" type="number" outlined v-model="txtAmount" label="Amount" />
         <q-input class="q-mt-sm" outlined v-model="txtTo" label="To" />
@@ -93,12 +99,14 @@ export default {
     const txtTo = ref('00ffffffffffffffffffffffffffffffffffffffff')
     const txtSymbol = ref('1234')
     const txtAmount = ref('1')
+    const baseURL = ref('https://betareader.partisiablockchain.com/shards/Shard0')
     return {
       partisiaCrypto,
       txtSymbol,
       txtAmount,
       txtTo,
       txtMessage,
+      baseURL,
       onTransfer: async () => {
         try {
           const sdkClient = store.getters.sdkClient
@@ -106,9 +114,10 @@ export default {
           const sdk = new PartisiaSdk({ seed: sdkClient.seed, connection: sdkClient.connection })
           // Payload_TokenTransfer
           const rpc = PartisiaRpc({
-            baseURL: 'https://betareader.partisiablockchain.com/shards/Shard0',
+            baseURL: baseURL.value,
           })
           const nonce = await rpc.getNonce(sdk.connection.account.address)
+          console.log('nonce', nonce)
           const contract = '02000000000000000000000000000000000000b008'
           const payload = {
             invocationType: partisiaCrypto.transaction.CONSTANTS.TokenInvocation.TRANSFER,
@@ -117,12 +126,17 @@ export default {
             from: sdk.connection.account.address,
             to: txtTo.value,
           }
+          console.log('payload', payload)
+          console.log(
+            { nonce, validTo: Date.now() + 120 * 1000 }, // two minutes
+          )
           const serialized = partisiaCrypto.transaction.serializedTransaction(
             { nonce, validTo: Date.now() + 120 * 1000 }, // two minutes
             { contract },
             payload,
-            partisiaCrypto.abi.Payload_TokenTransfer
+            partisiaCrypto.abi_system.Payload_TokenTransfer
           )
+          console.log('serialized', serialized)
           const res = await sdk.signMessage({
             payload: serialized.toString('hex'),
             payloadType: 'hex',
