@@ -68,7 +68,7 @@ export default {
     const $q = useQuasar()
     const store = useStore()
 
-    const txtChainId = ref('PARTISIA beta net (0.23)')
+    const txtChainId = ref('Partisia Blockchain (RC.0)')
     const txtPermissions = ref('sign')
     return {
       txtChainId,
