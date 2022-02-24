@@ -25,6 +25,4 @@ pages:      # This job runs in the deploy stage.
   artifacts:
       paths:
         - "gl-pages"
-  only:
-    - main
     
