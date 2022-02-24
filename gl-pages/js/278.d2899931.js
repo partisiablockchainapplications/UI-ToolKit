@@ -1,1 +1,0 @@
-(self["webpackChunkpartisia_sdk_docs"]=self["webpackChunkpartisia_sdk_docs"]||[]).push([[278],{278:(s,n,a)=>{"use strict";a.r(n),a.d(n,{default:()=>o});var e=a(3673);function t(s,n,a,t,c,r){const d=(0,e.up)("q-page");return(0,e.wg)(),(0,e.j4)(d,{padding:""})}const c={};var r=a(4379),d=a(9789),p=a.n(d);c.render=t;const o=c;p()(c,"components",{QPage:r.Z})}}]);
