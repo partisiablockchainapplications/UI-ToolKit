@@ -29,7 +29,7 @@ import { openURL } from 'quasar'
 export default {
   setup() {
     return {
-      codeInstall: `$ npm i git+https://gitlab.com/partisiaapplications/partisia-sdk.git`,
+      codeInstall: `npm i git+https://gitlab.com/partisiaapplications/partisia-sdk.git`,
       onGitLab: () => {
         openURL('https://gitlab.com/partisiaapplications/partisia-sdk')
       },

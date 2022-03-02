@@ -102,7 +102,7 @@ export default defineComponent({
         sub: [
           { name: 'Partisia', link: 'partisia' },
           { name: 'Wallets', link: 'wallets' },
-          { name: 'Security Audits', link: 'audit' },
+          // { name: 'Security Audits', link: 'audit' },
         ],
       },
       {

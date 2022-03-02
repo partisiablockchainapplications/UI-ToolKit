@@ -11,14 +11,14 @@
           <q-item-label class="text-subtitle2">Chrome</q-item-label>
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple @click="onWalletFirefox">
+      <!-- <q-item clickable v-ripple @click="onWalletFirefox">
         <q-item-section avatar>
           <q-icon color="negative" size="lg" name="lab la-firefox" />
         </q-item-section>
         <q-item-section>
           <q-item-label class="text-subtitle2">Firefox</q-item-label>
         </q-item-section>
-      </q-item>
+      </q-item> -->
     </q-list>
   </q-page>
 </template>
