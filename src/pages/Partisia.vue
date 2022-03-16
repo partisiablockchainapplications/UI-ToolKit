@@ -9,7 +9,7 @@
       <a target="_blank" href="https://www.partisiablockchain.com/">Partisia Blockchain</a> website
     </div>
     <q-separator color="grey" class="q-my-lg" />
-    <div class="text-h6">Partisia SDK</div>
+    <div class="text-h6">Partisia Wallet SDK</div>
     <div class="text-body1">
       The partisia-sdk creates a secure end-to-end encrypted channel to a wallet. The most common example of this would
       be communication between a Website (<a

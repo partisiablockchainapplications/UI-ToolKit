@@ -1,6 +1,22 @@
 // app global css in SCSS form
+body,
+input {
+  font-feature-settings: 'kern', 'liga';
+  // font-family: var(--md-text-font-family, _), -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
 .break-line {
   white-space: pre-wrap;
   line-break: anywhere;
   border-radius: 6px;
+}
+
+.q-header {
+  background-color: #171f75;
+}
+
+.q-toolbar__title {
+  margin-left: 10px;
+  font-size: 1.1rem;
+  line-height: 2.4rem;
 }

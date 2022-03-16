@@ -4,7 +4,7 @@
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
 
-        <q-toolbar-title> Partisia SDK </q-toolbar-title>
+        <q-toolbar-title> Partisia Wallet SDK </q-toolbar-title>
 
         <div class="text-subtitle2" style="cursor: pointer" @click="onGitLab">
           GitLab
