@@ -76,9 +76,15 @@ export default {
       onConnect: async () => {
         try {
           const sdk = new PartisiaSdk()
+          const permissions = txtPermissions.value
+            .split(',')
+            .join(' ')
+            .split(' ')
+            .filter((v) => v.length > 0)
+
           await sdk.connect({
             chainId: txtChainId.value,
-            permissions: [txtPermissions.value],
+            permissions,
             dappName: 'Ex dApp Name',
           })
           await store.dispatch('sdkConnect', { connection: sdk.connection, seed: sdk.seed })

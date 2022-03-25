@@ -110,7 +110,14 @@ export default defineComponent({
         sub: [
           { name: 'Installation', link: 'installation' },
           { name: 'Connect Wallet', link: 'connect' },
-          { name: 'Contract Interaction', link: 'contract' },
+        ],
+      },
+      {
+        title: 'SDK Interactions',
+        sub: [
+          { name: 'Sign Text', link: 'sign_text' },
+          { name: 'Contract Transaction', link: 'contract' },
+          { name: 'Request Private Key', link: 'private_key' },
         ],
       },
     ]
@@ -122,7 +129,7 @@ export default defineComponent({
         leftDrawerOpen.value = !leftDrawerOpen.value
       },
       onGitLab: () => {
-        openURL('https://gitlab.com/partisiaapplications/partisia-sdk')
+        openURL('https://gitlab.com/partisiablockchainapplications/partisia-sdk')
       },
       onDisconnect: async () => {
         // const sdk = store.

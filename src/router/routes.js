@@ -10,6 +10,8 @@ const routes = [
       { path: 'installation', component: () => import('pages/Installation.vue') },
       { path: 'connect', component: () => import('pages/Connect.vue') },
       { path: 'contract', component: () => import('pages/Contract.vue') },
+      { path: 'sign_text', component: () => import('pages/SignText.vue') },
+      { path: 'private_key', component: () => import('pages/PrivateKey.vue') },
       { path: '', component: () => import('pages/Partisia.vue') }
       // { path: '', component: () => import('pages/Index.vue') }
     ]
