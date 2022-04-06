@@ -29,12 +29,12 @@ import { openURL } from 'quasar'
 export default {
   setup() {
     return {
-      codeInstall: `npm i git+https://gitlab.com/partisiaapplications/partisia-sdk.git`,
+      codeInstall: `npm i git+https://gitlab.com/partisiablockchainapplications/partisia-sdk.git`,
       onGitLab: () => {
-        openURL('https://gitlab.com/partisiaapplications/partisia-sdk')
+        openURL('https://gitlab.com/partisiablockchainapplications/partisia-sdk')
       },
       onWalletPartisia: () => {
-        openURL('https://gitlab.com/partisiaapplications/partisia-wallet-extension')
+        openURL('https://gitlab.com/partisiablockchainapplications/partisia-wallet-extension')
       },
     }
   },
