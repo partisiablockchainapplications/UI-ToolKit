@@ -1,8 +1,8 @@
 {
-  "name": "partisia-sdk-docs",
+  "name": "partisia-ui-toolkit",
   "version": "0.0.1",
-  "description": "Docs for implementing Partisia SDK",
-  "productName": "Partisia SDK Docs",
+  "description": "PARTISIA UI TOOLKIT",
+  "productName": "PARTISIA UI TOOLKIT",
   "author": "Partisia Applications",
   "private": true,
   "scripts": {
