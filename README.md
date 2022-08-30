@@ -1,5 +1,7 @@
 # PARTISIA UI TOOLKIT
 
+> everything you need to build on Partisia!(https://partisiablockchain.com/) 🚀
+
 This UI toolkit serves  as a boiler plate for developers to quikly spin up new project on top of Partisia blockchain.
 
 
@@ -34,6 +36,9 @@ npm install
 quasar dev
 ```
 
+### Open the browser to view the app
+📱 Open http://localhost:8080 to see the app
+
 ### Lint the files
 ```bash
 npm run lint
@@ -58,7 +63,19 @@ chrome://extensions/
 # ...../partisia-wallet-extension/src-bex
 ```
 
+# 🔭 Learning about Partisia documentation
 
+### 📕 Read the docs: https://partidev.surge.sh/
+
+### 📚 Go through contracts on Partisia
 https://github.com/partisiablockchainapplications/CoreContracts/releases/tag/v0.0.1
 
+# 🛠 Buidl
+
+### To navigate view to deploy contract
 https://mpcexplorer.com/deploy-contract
+
+
+# 💬 Support Chat
+
+Join the telegram [support chat 💬](https://t.me/partisiampc) to ask questions and find others building with 🏗 Partisia!
