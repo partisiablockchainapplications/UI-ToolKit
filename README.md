@@ -57,3 +57,8 @@ chrome://extensions/
 # point to directory 
 # ...../partisia-wallet-extension/src-bex
 ```
+
+
+https://github.com/partisiablockchainapplications/CoreContracts/releases/tag/v0.0.1
+
+https://mpcexplorer.com/deploy-contract
