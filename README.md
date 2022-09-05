@@ -50,7 +50,7 @@ quasar build
 ```
 
 ### Customize the configuration
-See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js).
+See [Configuring quasar.conf.js](https://v2.quasar.dev/quasar-cli/quasar-conf-js)
 
 
 ### Add extension into Chrome Browser
@@ -65,7 +65,7 @@ chrome://extensions/
 
 # 🔭 Learning about Partisia documentation
 
-### 📕 Read the docs: https://partidev.surge.sh/
+### 📕 Read the docs: https://gitlab.com/
 
 ### 📚 Go through contracts on Partisia
 https://github.com/partisiablockchainapplications/CoreContracts/releases/tag/v0.0.1
