@@ -2,13 +2,18 @@
 
 > everything you need to build on Partisia!(https://partisiablockchain.com/) 🚀
 
-This UI toolkit serves  as a boiler plate for developers to quikly spin up new project on top of Partisia blockchain.
+This UI toolkit serves  as a boiler plate for developers to quickly spin up new project on top of Partisia blockchain.
 
 
 ## Features
 
 - [Coinbase](https://docs.cloud.coinbase.com/wallet-sdk/docs)
 - [Paypal](https://developer.paypal.com/)
+- [Partisia Wallet Chrome Extension]()
+- [MPC20]()
+- [MPC721]()
+- [MPC1155]()
+- [MPC MultiSig]()
 
 
 ## Prerequisites
