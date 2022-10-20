@@ -32,7 +32,3 @@ body {
 .splide__pagination__page.is-active {
   background: white !important;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
