@@ -33,6 +33,4 @@ body {
   background: white !important;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
