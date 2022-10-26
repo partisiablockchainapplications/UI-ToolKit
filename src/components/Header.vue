@@ -7,24 +7,6 @@
       <div class="flex flex-row">
         <a
           href="#"
-          @click="openDeployContract"
-          role="button"
-          class="block w-fit rounded-[100px] font-display font-bold text-white text-center text-lg lg:text-xl whitespace-nowrap sm:px-4 lg:px-8 py-4 ml-auto web3-button"
-        >
-          <span class="web3-span text-sm sm:text-lg text-black font-bold px-4 py-4 sm10">DEPLOY CONTRACT</span>
-        </a>
-
-         <a
-          href="#"
-          @click="openContractDocumentation"
-          role="button"
-          class="block w-fit rounded-[100px] font-display font-bold text-white text-center text-lg lg:text-xl whitespace-nowrap sm:px-4 lg:px-8 py-4 ml-auto web3-button"
-        >
-          <span class="web3-span text-sm sm:text-lg text-black font-bold px-4 py-4 sm10">CONTRACT DOCUMENTATION</span>
-        </a>
-
-        <a
-          href="#"
           @click="connectWallet"
           role="button"
           class="block w-fit bg-peace rounded-[100px] font-display font-bold text-white text-center text-lg lg:text-xl whitespace-nowrap sm:px-4 lg:px-8 py-4 ml-auto web3-button"
