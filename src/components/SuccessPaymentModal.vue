@@ -56,7 +56,7 @@
               </div>
               <div class="mt-5 sm:mt-6">
                 <a
-                  href="/successfulDonation"
+                  href="/#/successfulDonation"
                   class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-peace text-base font-medium text-white sm:text-sm"
                   @click="donatedProps = false"
                 >

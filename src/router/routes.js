@@ -1,4 +1,3 @@
-// import SuccessfulDonation from '../views/SuccessfulDonation.vue'
 
 
 
