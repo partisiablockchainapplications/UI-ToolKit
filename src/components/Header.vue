@@ -7,13 +7,13 @@
       <div class="flex flex-row">
         <a
           href="#"
-          @click="connectWallet"
+          @click="onConnect"
           role="button"
           class="block w-fit bg-peace rounded-[100px] font-display font-bold text-white text-center text-lg lg:text-xl whitespace-nowrap sm:px-4 lg:px-8 py-4 ml-auto web3-button"
         >
-          <span class="web3-span text-sm sm:text-lg text-black font-bold px-4 py-4 sm10">{{
-            this.web3Enabled === true ? 'DISCONNECT WALLET' : 'CONNECT PARTISIA WALLET'
-          }}</span>
+          <span class="web3-span text-sm sm:text-lg text-black font-bold px-4 py-4 sm10">
+            {{ walletAddress  ? walletAddressAppended : 'CONNECT PARTISIA WALLET'}}
+          </span>
         </a>
       </div>
     </div>
@@ -21,6 +21,9 @@
 </template>
 
 <script>
+import { defineComponent, ref, onMounted, computed } from 'vue'
+import { useStore  } from 'vuex'
+import { useQuasar } from 'quasar'
 import PartisiaSdk from 'partisia-sdk'
 
 export default {
@@ -30,26 +33,59 @@ export default {
       web3Enabled: false,
     }
   },
-
-  methods: {
-    async connectWallet() {
-      try {
-        const sdk = new PartisiaSdk()
-        let sdkRep = await sdk.connect({
-          chainId: 'Partisia Blockchain',
-          permissions: ['sign'],
-          dappName: 'PARTISIA UI toolkit',
-        })
-        let res = await sdkRep.requestKey()
-        console.log('wallet key:', JSON.stringify(res, null, 2))
-        this.web3Enabled = true
-      } catch (err) {
-        console.log(err.message)
-      }
+  computed: {
+    walletAddress() {
+      return this.sdkConnect?.connection?.account?.address
     },
+    walletAddressAppended() {
+      let first = this.walletAddress.substring(0, 4)
+      let last = this.walletAddress.substring(this.walletAddress.length - 6)
+      return first + '...' + last
+    },
+  },
+  methods: {
     openDeployContract() {
       window.open('https://mpcexplorer.com/deploy-contract', '_blank')
     },
+  },
+  setup() {
+    const $q = useQuasar()
+    const store = useStore()
+    const txtChainId = ref('Partisia Blockchain')
+    const txtPermissions = ref('sign')
+
+    store.watch(
+      (state, getters) => getters.onWalletConnect,
+      (newValue, oldValue) => {
+        onConnect()
+      }
+    )
+    return {
+      txtChainId,
+      txtPermissions,
+      sdkConnect: computed(() => store.getters.sdkClient),
+      onConnect: async () => {
+        try {
+          const sdk = new PartisiaSdk()
+          const permissions = txtPermissions.value
+            .split(',')
+            .join(' ')
+            .split(' ')
+            .filter((v) => v.length > 0)
+          await sdk.connect({
+            chainId: txtChainId.value,
+            permissions,
+            dappName: 'Partisia UItoolkit',
+          })
+          await store.dispatch('sdkConnect', { connection: sdk.connection, seed: sdk.seed })
+        } catch (error) {
+          $q.notify({ type: 'negative', position: 'top', message: error.message })
+        }
+      },
+      onDisconnect: async () => {
+        await store.dispatch('sdkClear')
+      },
+    }
   },
 }
 </script>
