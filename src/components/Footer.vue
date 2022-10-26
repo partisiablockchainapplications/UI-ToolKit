@@ -5,7 +5,7 @@
       <div class="flex flex-col sm:flex-row sm:items-center">
         <div class="space-y-8 sm:w-[60%]" style="width: 60%">
           <div>
-            <img src="../assets/charity.png" alt="Logo" class="w-[70px] h-[50px]" />
+            <img src="../assets/parti.svg" alt="Logo" class="w-[70px] h-[50px]" />
           </div>
           <p class="text-gray-500 text-base">Making the world a better place through donation</p>
           <p class="text-gray-500 text-base">Address, +190 763 468</p>

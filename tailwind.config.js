@@ -14,7 +14,7 @@ module.exports = {
         gray80: '#9D9DC4',
         gray100: '#545281',
         gray120: '#302C60',
-        peace: 'rgb(86, 146, 169)',
+        peace: '#20E6A2',
       },
     },
     fontFamily: {

@@ -17,7 +17,6 @@
     "@paypal/paypal-js": "^5.1.0",
     "@quasar/extras": "^1.0.0",
     "axios": "^0.27.2",
-    "core-js": "^3.6.5",
     "html2pdf.js": "^0.9.1",
     "partisia-crypto": "^1.0.2",
     "partisia-rpc": "^1.0.0",

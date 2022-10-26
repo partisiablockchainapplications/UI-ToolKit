@@ -51,7 +51,7 @@
 
     <p class="mt-10 w-full truncate">With transaction hash : <span class="underline pr-2 pl-2">0x58e5a0fc7fbc849eddc100d44e86276168a8c7baaa5604e44ba6f5eb8ba1b7eb</span></p>
 
-    <p class="mt-6">On <span class="underline pr-2 pl-2">Ethereum</span> [Chain]</p>
+    <p class="mt-6">On <span class="underline pr-2 pl-2">Partisia</span> [Chain]</p>
 
     <p class="mt-6">
       Empowering PEACE Foundation is classified as a 501(c)(3) non-profit
@@ -62,8 +62,8 @@
 
     <div class="mt-8 mb-3">
       <p class="pb-2 font-bold">Authorized Signature:</p>
-      <p class="pb-2">/LOGAN RYAN GOLEMA/</p>
-      <p class="pb-2">By Logan Ryan Golema</p>
+      <p class="pb-2">Owner Me</p>
+      <p class="pb-2">By Owner Me</p>
       <p class="pb-2">Title: Treasurer</p>
       <p>Tax ID Number: 88-0883180</p>
     </div>

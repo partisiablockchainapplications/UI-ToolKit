@@ -2,7 +2,7 @@
   <header style="z-index: 10" class="bg-gray-50 px-5 py-5 lg:px-8 text-white border-b border-white sticky top-0">
     <div class="flex items-center justify-between max-w-7xl m-auto">
       <a href="/">
-        <img src="../assets/charity.png" alt="Logo" class="w-[70px] h-[50px]" />
+        <img src="../assets/parti.svg" alt="Logo" class="w-[70px] h-[50px]" />
       </a>
       <div class="flex flex-row">
         <a

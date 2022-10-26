@@ -2,7 +2,7 @@
 
 > everything you need to build on Partisia!(https://partisiablockchain.com/) 🚀
 
-This UI toolkit serves  as a boiler plate for developers to quickly spin up new project on top of Partisia blockchain.
+This UI toolkit serves  as a boiler plate for developers to quickly spin up new project on top of Partisia blockchain. Th UI Toolkit is built on Quasar framework (https://quasar.dev/) with tailwind css (https://tailwindcss.com/) integrated into it.
 
 
 ## Features
