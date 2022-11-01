@@ -21,11 +21,11 @@ export default {
         {
           number: 1,
           name: "What languages do I need to know to interact with Partisia? ",
-          desc: "A:  We use rustwasm for contracts, This Front end is in vue3.js , css, javascript, typescript, html, and scss .The Backend is node.js and quasar tooling (for now) and the smart contracts",
+          desc: "We use rustwasm for contracts, This Front end is in vue3.js , css, javascript, typescript, html, and scss .The Backend is node.js and quasar tooling (for now) and the smart contracts",
         },
         {
           number: 2,
-          name: "Where can i find contract standards? ",
+          name: "Where can I find contract standards? ",
           desc: "https://github.com/partisiablockchainapplications/CoreContracts",
         },
         {
