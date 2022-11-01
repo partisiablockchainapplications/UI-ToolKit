@@ -15,6 +15,7 @@ module.exports = {
         gray100: '#545281',
         gray120: '#302C60',
         peace: '#20E6A2',
+        partBlue: '#0B073F',
       },
     },
     fontFamily: {

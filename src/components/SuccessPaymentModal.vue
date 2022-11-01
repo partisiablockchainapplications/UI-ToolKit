@@ -45,22 +45,22 @@
                     as="h3"
                     class="text-lg leading-6 font-medium text-gray-900"
                   >
-                    Donation Confirmation
+                    Modals and Buttons
                   </DialogTitle>
                   <div class="mt-2">
                     <p class="text-sm text-gray-500">
-                      Thanks for your donation, we really appreciate
+                      You can use our standard set of modals and buttons to get moving quickly in sync with our brand alignment. Download Official Media Packs below.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="mt-5 sm:mt-6">
                 <a
-                  href="/#/successfulDonation"
+                  href="https://partisiablockchain.com/media"
                   class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-peace text-base font-medium text-white sm:text-sm"
                   @click="donatedProps = false"
                 >
-                  Continue
+                  Download
                 </a>
               </div>
             </DialogPanel>

@@ -3,7 +3,7 @@
   <div class="mt-12">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold text-gray-800 sm:text-4xl">
-        <span class="leading-3">How to Donate</span>
+        <span class="leading-3">Extended On Ramp Implementations</span>
       </h2>
       <div class="mt-5">
         <div class="mx-auto max-w-[50%]" id="paypal-button-container"></div>

@@ -7,8 +7,8 @@
           <div>
             <img src="../assets/parti.svg" alt="Logo" class="w-[70px] h-[50px]" />
           </div>
-          <p class="text-gray-500 text-base">Making the world a better place through donation</p>
-          <p class="text-gray-500 text-base">Address, +190 763 468</p>
+          <p class="text-gray-500 text-base">Making the world a better place</p>
+  
           <div class="flex space-x-6">
             <a
               v-for="item in navigation.social"
@@ -44,7 +44,7 @@
       </div>
       <div class="mt-12 border-t border-gray-200 pt-8">
         <p class="text-base text-gray-400 xl:text-center">
-          The Empowering PEACE Foundation is a registered SOIC3 in Colorado, USA
+          The PARTISIA Foundation
         </p>
       </div>
     </div>
@@ -57,10 +57,8 @@ export default {
     let navigation = {
       sections: [
         { name: "Home", href: "/" },
-        { name: "Pillars", href: "#pillars" },
-        { name: "Donate", href: "#donate" },
-        { name: "Inventory", href: "#" },
-        { name: "Receipt", href: "/successfulDonation" },
+        { name: "FAQ", href: "#" },
+        { name: "Donate", href: "#" },
       ],
       social: [
         {

@@ -79,6 +79,9 @@ export default {
           })
           await store.dispatch('sdkConnect', { connection: sdk.connection, seed: sdk.seed })
         } catch (error) {
+          if(error.message == 'Extension not Found'){
+           return $q.notify({ type: 'positive', position: 'top', message: 'Download partisia wallet https://chrome.google.com/webstore/detail/partisia-wallet/gjkdbeaiifkpoencioahhcilildpjhgh?hl=en' })
+          }
           $q.notify({ type: 'negative', position: 'top', message: error.message })
         }
       },

@@ -7,7 +7,7 @@
     </div>
 
     <div class="mt-7">
-      <p class="pb-2">Empowering PEACE Foundation</p>
+      <p class="pb-2">Empowering Partisia</p>
       <p class="pb-2">524 Belmont Ave.</p>
       <p class="pb-2">Pueblo, Colorado</p>
       <p>81004</p>
@@ -54,7 +54,7 @@
     <p class="mt-6">On <span class="underline pr-2 pl-2">Partisia</span> [Chain]</p>
 
     <p class="mt-6">
-      Empowering PEACE Foundation is classified as a 501(c)(3) non-profit
+      Partisia Foundation is classified as a 501(c)(3) non-profit
       organization by the standards of the Internal Revenue Service (IRS).
       Therefore, the donation may be tax-deductible to the extent allowed by
       law.
