@@ -70,7 +70,7 @@ chrome://extensions/
 
 # 🔭 Learning about Partisia documentation
 
-### 📕 Read the docs: https://gitlab.com/
+### 📕 Read the docs: https://partisiablockchain.gitlab.io/documentation/index.html
 
 ### 📚 Go through contracts on Partisia
 https://github.com/partisiablockchainapplications/CoreContracts/releases/tag/v0.0.1
