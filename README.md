@@ -18,7 +18,7 @@ This UI toolkit serves  as a boiler plate for developers to quickly spin up new 
 
 ## Prerequisites
 
-- [Node](https://nodejs.org) v14 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
+- [Node](https://nodejs.org) v12 (it is recommended to install it via [NVM](https://github.com/creationix/nvm))
 - [Yarn](https://yarnpkg.com/)
 - A development machine set up for VUE by following [these instructions](https://vuejs.org/guide/quick-start.html#with-build-tools)
 - [Partisia wallet](https://chrome.google.com/webstore/detail/partisia-wallet/gjkdbeaiifkpoencioahhcilildpjhgh/related?hl=en)
@@ -26,7 +26,7 @@ This UI toolkit serves  as a boiler plate for developers to quickly spin up new 
 
 # Getting Started
 
-## use node v14.16.0
+## use node v12.22.12
 ```bash
 nvm use
 ```
