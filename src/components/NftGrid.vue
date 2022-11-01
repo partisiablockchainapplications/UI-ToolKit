@@ -17,9 +17,14 @@
 </template>
 
 <script>
-import Nft from '../assets/nft-1.webp'
-import Nft2 from '../assets/nft-2.webp'
-import Nft3 from '../assets/nft-3.webp'
+import Nft from '../assets/a1.png'
+import Nft2 from '../assets/a2.png'
+import Nft3 from '../assets/a3.png'
+import Nft5 from '../assets/a5.png'
+import Nft6 from '../assets/a6.png'
+import Nft7 from '../assets/a7.png'
+import Nft8 from '../assets/a8.png'
+import Nft9 from '../assets/a9.png'
 import NftGridDetails from './NftGriDetails.vue'
 
 export default {
@@ -44,27 +49,27 @@ export default {
         },
         {
           id: 4,
-          image: Nft,
+          image: Nft5,
           active: false,
         },
         {
           id: 5,
-          image: Nft,
+          image: Nft6,
           active: false,
         },
         {
           id: 6,
-          image: Nft2,
+          image: Nft7,
           active: false,
         },
         {
           id: 7,
-          image: Nft3,
+          image: Nft8,
           active: false,
         },
         {
           id: 8,
-          image: Nft,
+          image: Nft9,
           active: false,
         },
       ],
