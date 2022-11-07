@@ -75,7 +75,7 @@ chrome://extensions/
 ### 📚 Go through contracts on Partisia
 https://github.com/partisiablockchainapplications/CoreContracts/releases/tag/v0.0.1
 
-# 🛠 Buidl
+# 🛠 Build
 
 ### To navigate view to deploy contract
 https://mpcexplorer.com/deploy-contract
