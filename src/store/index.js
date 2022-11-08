@@ -49,7 +49,7 @@ export default store(function (/* { ssrContext } */) {
           },
           sdkConnect: (context, payload) => {
             context.commit('CONNECT', payload)
-          },
+          }
         },
         getters: {
           sdkClient: (state, getters) => {
@@ -69,7 +69,8 @@ export default store(function (/* { ssrContext } */) {
           SET_STATUS: (state, payload) => {
             state.status = payload
           },
-          NEW_TRANSACTION: (state, payload) => {},
+          NEW_TRANSACTION: (state, payload) => {
+          },
           SET_WALLET_CONNECT: (state, payload) => {
             state.onWalletConnect = payload
           },
@@ -106,12 +107,12 @@ export default store(function (/* { ssrContext } */) {
             return state.status
           },
         },
-      },
+      }
     },
 
     // enable strict mode (adds overhead!)
     // for dev mode and --debug builds only
-    strict: process.env.DEBUGGING,
+    strict: process.env.DEBUGGING
   })
 
   return Store

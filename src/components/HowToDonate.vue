@@ -36,16 +36,16 @@
 </template>
 
 <script>
-import { loadScript } from "@paypal/paypal-js";
+// import { loadScript } from "@paypal/paypal-js";
 
 export default {
   async mounted() {
-    const paypalSdk = await loadScript({
-      "client-id":
-        "ASxXSqsHNwkhCQU7UTYFu6yG-x_uE5qndsvkOx4fZIF6nNyWw_6tV7y32Mb-NVsC7mj9M8x5V03NAWVD",
-      currency: "USD",
-    });
-    paypalSdk.Buttons().render("#paypal-button-container");
+    // const paypalSdk = await loadScript({
+    //   "client-id":
+    //     process.env.PAYPAL,
+    //   currency: "USD",
+    // });
+    // paypalSdk.Buttons().render("#paypal-button-container");
   },
 };
 </script>

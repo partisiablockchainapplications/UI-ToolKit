@@ -17,8 +17,5 @@ export default defineComponent({
     Header,
     Footer
   },
-  setup() {
-    console.log(process.env.PAYPAL)
-  },
 })
 </script>
